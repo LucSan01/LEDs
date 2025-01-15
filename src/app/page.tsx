@@ -1,9 +1,7 @@
 "use client";
 import InputField from "@/components/InputField";
-import Nav from "@/components/Nav";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import email from "@/assets/icons/email.png";
 
 const textDisplays = [
   "beautiful",
@@ -114,9 +112,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="ml-lg mr-lg">
-          <div className="flex  ml-[15rem]  mr-[15rem] md:flex-wrap">
-            <div className="block p-[2rem]">
+        <div className="ml-lg mr-lg ">
+          <div className="flex h-fit flex-wrap md:flex-row md:m-[5rem] md:items-center">
+            <div className="block p-[2rem] flex-wrap md:h-fit">
               <div className="text-lg">
                 <div className="mb-[20px]">
                   <h2 className="font-bold text-[40px]">Hello, I'm Sandra</h2>
@@ -149,10 +147,44 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="items-center p-[2rem]">
-              <figure>
-                <img src="/IMG-20250113-WA0008.jpg" alt="" />
+            <div className="items-center shrink-0 p-[2rem]">
+              <figure className="">
+                <Image
+                  src="/IMG-20250113-WA0008.jpg"
+                  width={500}
+                  height={500}
+                  alt=""
+                  className="h-auto"
+                />
               </figure>
+            </div>
+          </div>
+
+          <div className=" bg-gray-200 shadow-inner p-[5rem]">
+            <div className="text-black place-items-center font-bold text-[2.5rem] p-[4rem]">
+              <h1>RESOURCES</h1>
+            </div>
+            <div className="flex-row place-items-center">
+              <div className="w-[30rem] bg-white p-5 place-items-center m-0">
+                <figure>
+                  <Image
+                    src="/main.jpg"
+                    width={300}
+                    height={200}
+                    alt="Phonix chart "
+                  />
+                </figure>
+                <div className="font-bold text-lg pt-[1rem]">
+                  <h2 className="">Sandra's Interactive Phonemic Chart</h2>
+                </div>
+                <div className="mt-5 place-self-center">
+                  <p>
+                    Learn all of the vowel and consonant sounds in British
+                    English (received pronunciation) with this free, interactive
+                    phonemic chart. Click on any sound to hear my pronunciation.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
